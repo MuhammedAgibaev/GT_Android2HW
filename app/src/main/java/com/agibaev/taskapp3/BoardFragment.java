@@ -56,37 +56,9 @@ public class BoardFragment extends Fragment {
                 textDesc.setText("Железный Человек и Капитан Америка: Герои Юнайтед - это прямой " +
                         "анимационный фильм Marvel Animation");
                 background.setBackgroundColor(Color.GREEN);
-//                skip.setVisibility(View.GONE);
-//                btn.setVisibility(View.VISIBLE);
         }
         return view;
 
-//        Button btn = view.findViewById(R.id.button);
-//        Button skip = view.findViewById(R.id.skip);
-
-//        btn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                SharedPreferences preferences = getActivity()
-//                        .getSharedPreferences("settings", Context.MODE_PRIVATE);
-//                preferences.edit().putBoolean("isShown", true).apply();
-//                startActivity(new Intent(getContext(), MainActivity.class));
-//                getActivity().finish();
-//            }
-//        });
-//
-//        skip.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                SharedPreferences preferences = getActivity()
-//                        .getSharedPreferences("settings", Context.MODE_PRIVATE);
-//                preferences.edit().putBoolean("isShown", true).apply();
-//                startActivity(new Intent(getContext(), MainActivity.class));
-//                getActivity().finish();
-//            }
-//        });
-//
-//        return view;
     }
 
 }
