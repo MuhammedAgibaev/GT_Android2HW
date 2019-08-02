@@ -9,8 +9,8 @@ import android.widget.EditText;
 
 public class FormActivity extends AppCompatActivity {
 
-    private EditText editTitle;
-    private EditText editDesc;
+    EditText editTitle;
+    EditText editDesc;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

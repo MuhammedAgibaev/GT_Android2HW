@@ -1,5 +1,8 @@
 package com.agibaev.taskapp3;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
@@ -17,6 +20,8 @@ import android.widget.TextView;
  */
 public class BoardFragment extends Fragment {
 
+    Button btnStart;
+
     public BoardFragment() {
     }
 
@@ -28,7 +33,7 @@ public class BoardFragment extends Fragment {
         TextView textTitle = view.findViewById(R.id.textTitle);
         TextView textDesc = view.findViewById(R.id.textDesc);
         LinearLayout background = view.findViewById(R.id.background);
-        Button btnStart = view.findViewById(R.id.btnStart);
+        btnStart = view.findViewById(R.id.btnStart);
         int pos = getArguments().getInt("pos");
 
         switch (pos){
@@ -57,6 +62,16 @@ public class BoardFragment extends Fragment {
                         "анимационный фильм Marvel Animation");
                 background.setBackgroundColor(Color.GREEN);
         }
+        btnStart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SharedPreferences preferences = getActivity().getSharedPreferences
+                        ("setting", Context.MODE_PRIVATE);
+                preferences.edit().putBoolean("isShown", true).apply();
+                startActivity(new Intent(getActivity(), MainActivity.class));
+                getActivity().finish();
+            }
+        });
         return view;
 
     }
